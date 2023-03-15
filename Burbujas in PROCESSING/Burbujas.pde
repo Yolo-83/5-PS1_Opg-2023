@@ -1,12 +1,12 @@
 class Burbujas {
 
-  ///// Erklærer Variablerne.
+  ///// Declare the Variables / Erklærer Variablerne.
   float x;
   float y;
   float diameter;
   float speed;
 
-  ///// Konstruktør.
+  ///// Constructor / Konstruktør.
   Burbujas (float D) {
     x = random(width);
     y = (height);
@@ -15,20 +15,20 @@ class Burbujas {
   }
 
 
-  /// Dette er selve Burbujas.
+  /// This is the form of the Burbuja itself.
   void display() {
     stroke(random(140), random(180), random(181), random(60));
     fill(random(193), random(80), random(81), random(144));
     ellipse(x, y, diameter, diameter);
   }
 
-  /// Hvilke retning de tager.
+  /// The direction the Burbujas will take.
   void ascend() {
     x = x + random(0, -0.000);
     y = y - speed;
   }
 
-  /// Betingelsen om, hvad der sker, når de nåh til toppen.
+  /// This is the Condition, that shows what the Burbujas will du after they reach the top of the screen.
   void top() {
     if (y < diameter) {
       y = height-diameter/2;
